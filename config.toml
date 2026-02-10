@@ -1,0 +1,8 @@
+baseURL = 'https://site.morzz.com'
+languageCode = 'zh-CN'
+title = '编码,空间站'
+theme = 'ananke'
+
+{params]
+  author = 'Drone CI'
+  description = '说尽机标 优化'
