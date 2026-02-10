@@ -5,13 +5,15 @@ name: site-deploy
 steps:
   - name: build
     image: hugo:latest
+    pull: never
     commands:
       - hugo --minify
 
   - name: deploy
     image: appleboy/drone-scp
     settings:
-      host: morzz.com
+      host: 172.17.0.1
+      port: 32179
       username: root
       key:
         from_secret: SSH_KEY
