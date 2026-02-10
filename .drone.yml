@@ -4,10 +4,12 @@ name: site-deploy
 
 steps:
   - name: build
-    image: hugo:latest
-    pull: never
+    image: peaceiris/hugo:extended
+    pull: always
     commands:
+      - hugo --version
       - hugo --minify
+
 
   - name: deploy
     image: appleboy/drone-scp
